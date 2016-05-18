@@ -1,0 +1,25 @@
+{
+  "bot": {
+    "isbot": true,
+    "token": "MTgwNTI5NTc2MTY0ODUxNzEy.ChbixQ.5C4SKpJLb_44t7CYyATVQtupSPI",
+    "oauth": "https://discordapp.com/oauth2/authorize?&client_id=180529444795056128&scope=bot"
+  },
+  "settings": {
+    "prefix": "!"
+  },
+  "permissions": {
+    "master": ["98986255353647104"],
+    "level1": [],
+    "level2": [],
+    "level3": []
+  },
+  "api_keys": {
+    "imgflip": {
+      "username": "eternobot",
+      "password": "eternobot"
+    },
+    "google": "AIzaSyDUerTk86pc8jpv-2qVWJWFiVfFHbiaV_k",
+    "mashape": "A mashape key",
+    "cse": "009384234020857026547:_x4xnk6h5xg"
+  }
+}

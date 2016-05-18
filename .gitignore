@@ -3,7 +3,6 @@
 npm-debug.log*
 
 # UGC
-config.json
 
 # Runtime data
 pids
