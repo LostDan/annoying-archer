@@ -1,8 +1,8 @@
 {
   "bot": {
     "isbot": true,
-    "token": "MTgwNTI5NTc2MTY0ODUxNzEy.ChbixQ.5C4SKpJLb_44t7CYyATVQtupSPI",
-    "oauth": "https://discordapp.com/oauth2/authorize?&client_id=180529444795056128&scope=bot"
+    "token": "MTgyOTQ5ODg5NzMzMjk2MTI5.Ch-w3A.ri4XhGWhnRMMYbCg7VZlX778Ro4",
+    "oauth": "https://discordapp.com/oauth2/authorize?&client_id=182949889733296129&scope=bot"
   },
   "settings": {
     "prefix": "!"
