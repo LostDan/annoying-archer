@@ -12,19 +12,35 @@ Cmds.hscard = {
         unirest.get(url + suffix.split(" ")[0])
             .header('X-Mashape-Key', config.api_keys.mashape)
             .end(function(result) {
-                    if (result.body.length <= 0) {
+                    if (result.body.error == 404) {
                         msg.reply("No results :sob:");
                         return;
                     }
-                    var card = result.body[0];
-                    if (card.imgGold) {
-                        msg.channel.sendMessage(card.imgGold);
-                    } else {
-                        msg.channel.sendMessage(card.img);
-                    }
+                    result.body.forEach(function(card) {
+                        var msgArray = [];
+                        if (card.imgGold) {
+                            msgArray.push(card.imgGold);
+                        } else if (card.img) {
+                            msgArray.push(card.img);
+                        }
+                        
+                        msgArray.push("**" + card.name + "**");
+                        msgArray.push("Type: **" + card.type + "**");
+                        msgArray.push("Set: **" + card.cardSet + "**");
+                        
+                        if (card.rarity) {
+                            msgArray.push("Rarity: **" + card.rarity + "**");
+                        }
+                        
+                        if (card.flavor) {
+                            msgArray.push(card.flavor);
+                        }
+                        
+                        msgArray.push('\n');
+                        
+                        msg.channel.sendMessage(msgArray.join('\n'))
+                    }, this);
                     
-                    msg.channel.sendMessage("Rarity: **" + card.rarity + "**");
-                    msg.channel.sendMessage(card.flavor);
             });
     }
 }
