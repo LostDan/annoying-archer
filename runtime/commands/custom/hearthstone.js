@@ -1,7 +1,6 @@
-var unirest = require('unirest')
+var unirest = require('unirest');
+var config = require("../../../config.json");
 var Cmds = [];
-
-
 
 Cmds.hscard = {
     name: 'hscard',
@@ -10,14 +9,14 @@ Cmds.hscard = {
     level: 0,
     fn: function(msg, suffix) {
         var url = "https://omgvamp-hearthstone-v1.p.mashape.com/cards/search/";
-        unirest.get(url)
+        unirest.get(url + suffix.split(" ")[0])
             .header('X-Mashape-Key', config.api_keys.mashape)
             .end(function(result) {
-                    if (result.length <= 0) {
+                    if (result.body.length <= 0) {
                         msg.reply("No results :sob:");
                         return;
                     }
-                    var card = result[0];
+                    var card = result.body[0];
                     if (card.imgGold) {
                         msg.channel.sendMessage(card.imgGold);
                     } else {
