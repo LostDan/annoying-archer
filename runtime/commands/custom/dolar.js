@@ -16,10 +16,11 @@ Cmds.dolartoday = {
     level: 0,
     fn: function(msg, suffix) {
         request(opts, function(err, res, body) {
+            var response = JSON.parse(body);
             if (err) {
                 return;
             }
-            var msgBody = "``` Transferencia:" + body.USD.transferencia + "```";
+            var msgBody = "Transferencia: **" + response.USD.transferencia + "**";
             msg.channel.sendMessage(msgBody);
         });
     }
