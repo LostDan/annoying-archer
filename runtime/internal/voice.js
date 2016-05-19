@@ -72,7 +72,7 @@ exports.leave = function (msg, suffix, bot) {
 function waiting (vc) {
   var waitMusic = vc.voiceConnection.createExternalEncoder({
     type: 'ffmpeg',
-    source: 'fanta.mp3',
+    source: 'Fanta.mp3',
     format: 'pcm'
   })
   waitMusic.play()
@@ -99,8 +99,9 @@ function next (msg, suffix, bot) {
             msg.channel.sendMessage('Next up is **' + list[msg.guild.id].info[0] + '** requested by _' + list[msg.guild.id].requester[0] + '_')
             next(msg, suffix, bot)
           } else {
-            msg.channel.sendMessage('Playlist has ended, leaving voice.')
-            connection.voiceConnection.disconnect()
+            msg.channel.sendMessage('Playlist has ended, waiting.')
+            // connection.voiceConnection.disconnect()
+            waiting(connection);
           }
         })
       }
