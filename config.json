@@ -1,14 +1,14 @@
 {
   "bot": {
     "isbot": true,
-    "token": "MTg1Nzg5NzczNjQ0OTU1NjQ4.CioFtg.M2DyrkG3MMUSlRGg8FfRejbf-6U",
-    "oauth": "https://discordapp.com/oauth2/authorize?&client_id=185789735313080320&scope=bot"
+    "token": "MTk1NzY3OTU3Njk4MTE3NjMy.ClTiJQ.gQm8LNssdW6qUw49DcPzxnWmZFc,
+    "oauth": "https://discordapp.com/oauth2/authorize?&client_id=195767921580965888&scope=bot"
   },
   "settings": {
     "prefix": "!"
   },
   "permissions": {
-    "master": ["98986255353647104", "98976315176153088"],
+    "master": ["185587447931994112"],
     "level1": [],
     "level2": [],
     "level3": []
