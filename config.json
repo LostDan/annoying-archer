@@ -2,13 +2,13 @@
   "bot": {
     "isbot": true,
     "token": "MTk3OTA2NzA5MDIzMjkzNDQw.ClYafA.0-UvVg-jcPsH9W98-33zzk_R4oA",
-    "oauth": "https://discordapp.com/oauth2/authorize?&client_id=195767921580965888&scope=bot"
+    "oauth": "https://discordapp.com/oauth2/authorize?&client_id=197906478655471616&scope=bot"
   },
   "settings": {
     "prefix": "!"
   },
   "permissions": {
-    "master": ["185587447931994112"],
+    "master": ["187665250965782530"],
     "level1": [],
     "level2": [],
     "level3": []
